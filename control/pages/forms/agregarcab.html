@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Hawaii Blue | Agregar Cabañas</title>
+  <title>Admin Hawaii Blue | Gestionar Cabañas</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -34,7 +34,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Agregar Cabañas</b></span>
+      <span class="logo-lg"><b>Gestionar Cabañas</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -329,9 +329,8 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/agregarcab.html"><i class="fa fa-circle-o"></i> Agregar</a></li>
-                                <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Modificar</a></li>
-                                <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Eliminar</a></li>
+                                <li><a href="pages/forms/agregarcab.html"><i class="fa fa-circle-o"></i> Gestionar</a></li>
+                                <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Consultar</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -428,29 +427,42 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Formulario de registro de cabañas
+        Formularios de gestión de cabañas
         <small>Preview</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Forms</a></li>
-        <li class="active">Agregar Cabañas</li>
+        <li class="active">Gestionar Cabañas</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
+     
+     <!-- START ACCORDION & CAROUSEL-->
+      <h2 class="page-header">Gestión de tipos de cabañas</h2>
+
       <div class="row">
-        <!-- left column -->
         <div class="col-md-6">
-          <!-- general form elements -->
-          <div class="box box-primary">
+          <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Registrar nuevo Tipo</h3>
+              <h3 class="box-title">Gestion de tipos</h3>
             </div>
             <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                <div class="panel box box-success">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        Registrar tipo de cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <form role="form">
               <div class="box-body">
                
                 <div class="form-group">
@@ -476,14 +488,171 @@
                 <button type="submit" class="btn btn-primary">Registrar</button>
               </div>
             </form>
+                  </div>
+                </div>
+                <div class="panel box box-warning">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                       modificar tipo de cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                   
+                 
+		<p class="margin">Haga una busqueda por nombre del tipo de cabaña que desea modificar</p>
+
+              <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Ingrese el tipo a buscar">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat">Go!</button>
+                    </span>
+              </div>
+                 <form role="form">
+              <div class="box-body">
+               
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nombre</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese Nombre">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Descripccion</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese una descripcion corta">
+                </div>
+                
+                <div class="form-group">
+                  
+                  <span class="input-group-addon">Precio $</span>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese Precio">
+                </div>
+                
+                
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+              </div>
+            </form>
+                  </div>
+                </div>
+                <div id="page-wrapper">
+
+
+
+      </div>
+                <div class="panel box box-danger">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        Eliminar Tipo de cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <h3>Eliminar Tipos</h3>
+<br>
+		
+			<table class="table table-bordered table-hover">
+			<thead>
+			<tr><th>Nombre</th>
+			<th></th>
+			</tr></thead>
+							<tbody><tr>
+				<td>uno de la lista</td>
+				<td style="width:80px;"> <a href="" class="btn btn-danger btn-xs">Eliminar</a></td>
+				</tr>
+								<tr>
+				<td>otro de la lista</td>
+				<td style="width:80px;"> <a href="" class="btn btn-danger btn-xs">Eliminar</a></td>
+				</tr>
+				</tbody></table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
           </div>
-           <div class="box box-primary">
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <div class="box box-solid">
             <div class="box-header with-border">
-              <h3 class="box-title">Registrar nueva cabaña</h3>
+              <h3 class="box-title">Carousel</h3>
             </div>
             <!-- /.box-header -->
-            <!-- form start -->
-            <form role="form">
+            <div class="box-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="http://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap" alt="First slide">
+
+                    <div class="carousel-caption">
+                      First Slide
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap" alt="Second slide">
+
+                    <div class="carousel-caption">
+                      Second Slide
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap" alt="Third slide">
+
+                    <div class="carousel-caption">
+                      Third Slide
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="fa fa-angle-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <!-- END ACCORDION & CAROUSEL-->
+      
+      <!-- START ACCORDION & CAROUSEL-->
+      <h2 class="page-header">Gestión de cabañas</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Cabañas</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                <div class="panel box box-success">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                        Registrar cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse in">
+                    
+                    <form role="form">
               <div class="box-body">
                <div class="form-group">
                   <label>Seleccione el tipo de cabaña</label>
@@ -520,27 +689,160 @@
                 <button type="submit" class="btn btn-primary">Registrar</button>
               </div>
             </form>
+                    
+                  </div>
+                </div>
+                <div class="panel box box-warning">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                       modificar cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse">
+                   
+                 
+		<p class="margin">Haga una busqueda por nombre del tipo de cabaña que desea modificar</p>
+
+              <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Ingrese el tipo a buscar">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat">Go!</button>
+                    </span>
+              </div>
+                 <form role="form">
+              <div class="box-body">
+               <div class="form-group">
+                  <label>Seleccione el tipo de cabaña</label>
+                  <select class="form-control">
+                   <option>Seleccione</option>
+                    <option>Dual</option>
+                    <option>Familiar</option>
+                    <option>Especial</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Seleccione el sector</label>
+                  <select class="form-control">
+                   <option>Seleccione</option>
+                    <option>Montaña</option>
+                    <option>Playa</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Asignar un serial</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese serial">
+                </div>
+                
+                
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Marcar cabaña como disponible
+                  </label>
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+              </div>
+            </form>
+                  </div>
+                </div>
+                <div id="page-wrapper">
+
+
+
+      </div>
+                <div class="panel box box-danger">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                        Eliminar Cabaña
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse">
+                    <h3>Eliminar</h3>
+<br>
+		
+			<table class="table table-bordered table-hover">
+			<thead>
+			<tr><th>Nombre</th>
+			<th></th>
+			</tr></thead>
+							<tbody><tr>
+				<td>uno de la lista</td>
+				<td style="width:80px;"> <a href="" class="btn btn-danger btn-xs">Eliminar</a></td>
+				</tr>
+								<tr>
+				<td>otro de la lista</td>
+				<td style="width:80px;"> <a href="" class="btn btn-danger btn-xs">Eliminar</a></td>
+				</tr>
+				</tbody></table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          
-          <!-- /.box -->
-          <!-- Form Element sizes -->
-          
-          <!-- /.box -->
-         
-            
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Carousel</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="http://placehold.it/900x500/39CCCC/ffffff&text=I+Love+Bootstrap" alt="First slide">
+
+                    <div class="carousel-caption">
+                      First Slide
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://placehold.it/900x500/3c8dbc/ffffff&text=I+Love+Bootstrap" alt="Second slide">
+
+                    <div class="carousel-caption">
+                      Second Slide
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="http://placehold.it/900x500/f39c12/ffffff&text=I+Love+Bootstrap" alt="Third slide">
+
+                    <div class="carousel-caption">
+                      Third Slide
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="fa fa-angle-right"></span>
+                </a>
+              </div>
+            </div>
             <!-- /.box-body -->
-          
-          <!-- /.box -->
-
-
-        <!--/.col (left) -->
-        <!-- right column -->
-
+          </div>
           <!-- /.box -->
         </div>
-        <!--/.col (right) -->
+        <!-- /.col -->
       </div>
+      <!-- /.row -->
+      <!-- END ACCORDION & CAROUSEL-->
+      
       <!-- /.row -->
     </section>
     <!-- /.content -->
