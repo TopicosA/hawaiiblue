@@ -88,7 +88,7 @@
 			$dat = array("nombre", "descripcion", "precio");
 			$valu = array("matrimonial", "casados", 23.543);
 			$conx->conectar();
-			$conx->insertar($tab, $dat, $valu);
+			$conx->insertar($tab, $valu, $dat);
 			$conx->cerrarConexion();
 
 */			
