@@ -462,22 +462,23 @@
                     </h4>
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in">
-                    <form role="form">
+             
+			 <form action="pruebas.php" method="post">
               <div class="box-body">
-               
+				<input type="hidden" name="opcion" value=0>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nombre</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese Nombre">
+                  <input type="text" class="form-control" name="nombretipo" id="exampleInputEmail1" placeholder="ingrese Nombre">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Descripccion</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese una descripcion corta">
+                  <input type="text" class="form-control" name="descripciontipo" id="exampleInputEmail1" placeholder="ingrese una descripcion corta">
                 </div>
                 
                 <div class="form-group">
                   
                   <span class="input-group-addon">Precio $</span>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese Precio">
+                  <input type="text" class="form-control" name="preciotipo" id="exampleInputEmail1" placeholder="ingrese Precio">
                 </div>
                 
                 
@@ -485,9 +486,10 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="submit" name="registrartipo" class="btn btn-primary">Registrar</button>
               </div>
-            </form>
+			  </form>
+           
                   </div>
                 </div>
                 <div class="panel box box-warning">
@@ -652,11 +654,12 @@
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse in">
                     
-                    <form role="form">
+             <form action="pruebas.php" method="post">
               <div class="box-body">
+			  <input type="hidden" name="opcion" value=1>
                <div class="form-group">
                   <label>Seleccione el tipo de cabaña</label>
-                  <select class="form-control">
+                  <select class="form-control" name="tipoc" >
                    <option>Seleccione</option>
                     <option>Dual</option>
                     <option>Familiar</option>
@@ -665,28 +668,28 @@
                 </div>
                 <div class="form-group">
                   <label>Seleccione el sector</label>
-                  <select class="form-control">
+                  <select class="form-control" name="sectorc" >
                    <option>Seleccione</option>
-                    <option>Montaña</option>
+                    <option>Montania</option>
                     <option>Playa</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Asignar un serial</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ingrese serial">
+                  <input type="text" class="form-control" name="serialc" id="exampleInputEmail1" placeholder="ingrese serial">
                 </div>
                 
                 
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Marcar cabaña como disponible
+                    <input type="checkbox" name="marcac"> Marcar cabaña como disponible
                   </label>
                 </div>
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="submit" name="registrarcabaña" class="btn btn-primary">Registrar</button>
               </div>
             </form>
                     

@@ -43,17 +43,17 @@
 				 *					se tomara como que se hara una insercion a todos los campos
 				 */
 				public function insertar($tabla, $valores, $datos = ""){	
-					$sql = "INSERT INTO `$tabla`";
-
+					$sql = "INSERT INTO $tabla";
+					
 					if (!empty($datos[0])) {
-						$sql = $this->completarConsultaSql($datos, $sql, "`");
+						$sql = $this->completarConsultaSql($datos, $sql, "");
 					}
 
 
 					$sql .= " VALUES";
 					$sql = $this->completarConsultaSql($valores, $sql, "'");
 					$sql .= ";";
-
+					echo $sql;
 					mysqli_query($this->con, $sql);
 					}
 
@@ -81,6 +81,10 @@
 
 
 			}
+			
+
+			
+			
 
 /*
 			$conx = new Conexion();

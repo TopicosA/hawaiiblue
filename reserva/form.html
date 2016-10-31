@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RESERVA HAWAII BLUE</title>
+	<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+		<video id="Video1" class="bgvid back" autoplay="true" muted="muted" preload="auto" loop>
+      <source src="../media/milky.mp4" type="video/mp4">
+  </video>
+	
+		<h1><a>RESERVA HAWAII BLUE</a></h1>
+		<form id="form_382" class="appnitro"  method="post" action="">
+					<div class="form_description">
+			<h2>RESERVA HAWAII BLUE</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description"  for="element_1">CEDULA</label>
+		<div>
+			<input id="element_1" name="cccliente" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">CLIENTE </label>
+		<span>
+			<input id="element_2_1" name= "nombrecliente" class="element text" maxlength="255" size="8" value=""/>
+			<label>Nombre</label>
+		</span>
+		<span>
+			<input id="element_2_2" name= "apellidocliente" class="element text" maxlength="255" size="14" value=""/>
+			<label>Apellido</label>
+		</span> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_4">FECHA NACIMIENTO </label>
+		<span>
+			<input id="element_4_1" name="mes" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_4_1">MES</label>
+		</span>
+		<span>
+			<input id="element_4_2" name="dia" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_4_2">DIA</label>
+		</span>
+		<span>
+	 		<input id="element_4_3" name="año" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_4_3">AÑO</label>
+		</span>
+	
+		<span id="calendar_4">
+			<img id="cal_img_4" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_4_3",
+			baseField    : "element_4",
+			displayArea  : "calendar_4",
+			button		 : "cal_img_4",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_3">DIRECCION</label>
+		<div>
+			<input id="element_3" name="direcliente" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_3">TELEFONO</label>
+		<div>
+			<input id="element_3" name="telefonocliente class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">SELECCIONAR TIPO DE CABAÑA</label>
+		<div>
+		<select class="element select medium" id="element_6" name="element_6"> 
+			<option value="" selected="selected"></option>
+				<option value="1" >DUAL</option>
+				<option value="2" >FAMILIAR</option>
+				<option value="3" >ESPECIAL</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">FECHA ENTRADA </label>
+		<span>
+			<input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_4_1">MES</label>
+		</span>
+		<span>
+			<input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_4_2">DIA</label>
+		</span>
+		<span>
+	 		<input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_4_3">AÑO</label>
+		</span>
+	
+		<span id="calendar_4">
+			<img id="cal_img_4" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_4_3",
+			baseField    : "element_4",
+			displayArea  : "calendar_4",
+			button		 : "cal_img_4",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">FECHA SALIDA</label>
+		<span>
+			<input id="element_5_1" name="element_5_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_5_1">MES</label>
+		</span>
+		<span>
+			<input id="element_5_2" name="element_5_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_5_2">DIA</label>
+		</span>
+		<span>
+	 		<input id="element_5_3" name="element_5_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_5_3">AÑO</label>
+		</span>
+	
+		<span id="calendar_5">
+			<img id="cal_img_5" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_5_3",
+			baseField    : "element_5",
+			displayArea  : "calendar_5",
+			button		 : "cal_img_5",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">TIPO DE SERVICIO</label>
+		<div>
+		<select class="element select medium" id="element_8" name="element_8"> 
+			<option value="" selected="selected"></option>
+			<option value="1" >TODOS</option>
+			<option value="2" >MONTAÑA</option>
+			<option value="3" >PLAYEROS</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Multiple Choice </label>
+		<span>
+			<input id="element_7_1" name="element_7" class="element radio" type="radio" value="1" />
+			<label class="choice" for="element_7_1">First option</label>
+			<input id="element_7_2" name="element_7" class="element radio" type="radio" value="2" />
+			<label class="choice" for="element_7_2">Second option</label>
+			<input id="element_7_3" name="element_7" class="element radio" type="radio" value="3" />
+			<label class="choice" for="element_7_3">Third option</label>
+
+		</span> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="382" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="RESERVAR" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+			Generated by <a href="http://www.phpform.org">pForm</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
