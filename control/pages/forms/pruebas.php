@@ -1,9 +1,10 @@
 <?php 
-
+echo "si entra<br/>";
 $opcion=$_POST["opcion"];
 include('../../../conexion/conexion.php');
 switch ($opcion) {
     case 0:
+        echo "si entra a r tipo c<br/>";
         $nombretipo=$_POST["nombretipo"];
 		$descripciontipo=$_POST["descripciontipo"];
 		$preciotipo=$_POST["preciotipo"];

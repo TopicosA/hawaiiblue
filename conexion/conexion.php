@@ -10,8 +10,8 @@
 
             //Atributos.
             private $host = "localhost";	//Host como localhost, como no tenemos un domio toca así jaja.
-            private $user = "edsn";			//Usuario por defecto en MySQL.
-            private $pw = "1234";		//Me imagino que todos usaron como contraseña topicos como se dijo en el chat.
+            private $user = "root";			//Usuario por defecto en MySQL.
+            private $pw = "topicos";		//Me imagino que todos usaron como contraseña topicos como se dijo en el chat.
             private $db = "hwiblue";		//El nombre de la base de datos, espero todos la tengan con el mismo nombre.
             private $con;					//Objeto que mantendrá la conexión con la base de datos.
 
@@ -32,8 +32,9 @@
 				 *	metodo, planeo hacer un metodo para los update, select y demás para ahorrarles el escribir la consulta completa 
 				 *	pero por ahora pueden usar este si necesitan hacer alguna otra cosa aparte de un insert
 				 */
-            public function query($query){		
-                mysqli_query($this->con, $query);
+            public function consultar($query){		
+				$result = $this->con->query($query);
+				return $result;
             }
 
             /*	Método que sirve para realizar un insert a la bd
@@ -42,14 +43,6 @@
 				 *	$datos 		=>	El nombre de los campos que se insertaran valores, si se envia una cadena vacia o no se manda nada
 				 *					se tomara como que se hara una insercion a todos los campos
 				 */
-<<<<<<< HEAD
-				public function insertar($tabla, $valores, $datos = ""){	
-					$sql = "INSERT INTO $tabla";
-					
-					if (!empty($datos[0])) {
-						$sql = $this->completarConsultaSql($datos, $sql, "");
-					}
-=======
             public function insertar($tabla, $valores, $datos = ""){	
                 $sql = "INSERT INTO $tabla";
 
@@ -104,42 +97,24 @@
                 $sql .= " SET ";
                 for($i = 0; $i <= $val; $i++) {
                     $sql .=  $datos[$i] . "="."'".$valores[$i]."'";
->>>>>>> 6c625d9b16d9c1c4c947e5adc8651c53aae0c98b
 
                     if ($i < $val) {
                         $sql .= ", ";
                     }
 
-<<<<<<< HEAD
-					$sql .= " VALUES";
-					$sql = $this->completarConsultaSql($valores, $sql, "'");
-					$sql .= ";";
-					echo $sql;
-					mysqli_query($this->con, $sql);
-					}
-=======
                 }
 
                 $sql .= " WHERE ".$datoprincip."='".$vlrprincip."';";
                 return $sql;
             }
->>>>>>> 6c625d9b16d9c1c4c947e5adc8651c53aae0c98b
 
 
-            public function consultar($consulta){ //Método que planeo usar para hacer los selects
+            //public function consultar($consulta){ //Método que planeo usar para hacer los selects
 
-            }
+            //}
 
 
-<<<<<<< HEAD
-			}
-			
-
-			
-			
-=======
         }
->>>>>>> 6c625d9b16d9c1c4c947e5adc8651c53aae0c98b
 
         /*
 			$conx = new Conexion();

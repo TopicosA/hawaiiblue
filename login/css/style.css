@@ -70,7 +70,7 @@ body{
   cursor:pointer;
 }
 .box button:active{
-  background:#fff;
+  background:#27ae60;
 }
 .box p{
   font-size:14px;
@@ -78,5 +78,5 @@ body{
 }
 .box p span{
   cursor:pointer;
-  color:#fff;
+  color:#666;
 }
